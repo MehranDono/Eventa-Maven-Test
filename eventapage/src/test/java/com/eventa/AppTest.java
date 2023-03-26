@@ -57,7 +57,7 @@ public class AppTest
                     System.out.println(report);
                 pageA.CloseBrowser();
 
-
+                    System.out.println("This is a demo test!!!");
 
             }
 
