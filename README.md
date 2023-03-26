@@ -2,8 +2,6 @@
 <html>
 <body>
 	<h1>TestNG Framework Tests</h1>
-php
-Copy code
 <p>This repository contains a set of tests implemented using the TestNG framework. TestNG is a powerful testing framework for Java that allows developers to write and run tests at different levels of granularity, from unit tests to end-to-end tests.</p>
 
 <h2>Prerequisites</h2>
