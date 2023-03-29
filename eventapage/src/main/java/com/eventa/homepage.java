@@ -71,13 +71,13 @@ public class homepage extends pageActions {
     public  String testWithAttributeValue(String prfileName) 
         {
             // Testing profile name
-    
+            
             try {
                 getElementValue(prfileName);
                 String expResult = prfileName;
                 String actualResult = getElementAttribute(profileNameInputBox, "value");
     
-                if (expResult.equalsIgnoreCase(actualResult)) {
+                 if (expResult.equalsIgnoreCase(actualResult)) {
                     System.out.println("Test Passed!!!!!!!!!  Profile name matches!! ");
                 } else {
                     System.out.println("Test Failed!!! Profile Name does not match!");
@@ -86,8 +86,42 @@ public class homepage extends pageActions {
     
                 System.out.println("Nothing found!!!!  Failed!!");
             } 
-            return null;
+            return null; 
         }
+
+    public boolean validateProfileNameExist(String profileName)
+    {
+            try {
+                String expResult = profileName;
+                String actualREsult = getElementAttribute(profileNameInputBox, "value");
+
+                if (expResult.equalsIgnoreCase(actualREsult)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } catch (Exception e) {
+
+                return false;
+            }
+
+    }
+
+    public boolean validateProfileNameNotExsit(String profileName) 
+    {
+        try {
+            String expResult = profileName;
+            String actualREsult = getElementAttribute(profileNameInputBox, "value"); //
+            if (expResult.equalsIgnoreCase(actualREsult)) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (Exception e) {
+            return true;
+        }
+    }
+
 
 
 

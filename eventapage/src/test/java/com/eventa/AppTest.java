@@ -1,8 +1,6 @@
 package com.eventa;
 
-
-
-import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 
@@ -19,7 +17,7 @@ public class AppTest
     /**
      * Rigorous Test :-)
      */
-    @Test
+    @Test(priority = 1)
             public void loginTest()
     {
         // ---------------------- Login Test --------------------------
@@ -27,11 +25,11 @@ public class AppTest
         pageA.ManageBrowserUtilities();
         testHomepage.NavigateToUrl("https://www.eventa.llc");
         testHomepage.login();
-        testHomepage.testWithAttributeValue("Techno");
-        pageA.CloseBrowser();
+        Assert.assertEquals(testHomepage.validateProfileNameExist("Techno"), true, "Failed Profile Name is not found");
+        
     }
 
-    @Test
+    @Test(priority = 2)
             public void logoutTest()
         {
             // ---------------------- Logout Test --------------------------
@@ -40,25 +38,15 @@ public class AppTest
             testHomepage.NavigateToUrl("https://www.eventa.llc");
             testHomepage.login();
             testHomepage.logout();
-            pageA.CloseBrowser();
+            Assert.assertEquals(testHomepage.validateProfileNameNotExsit("James williams"), true,
+                    "Failed ProfileName is not Expected at this point");
 
         }
 
-    @Test
-            public void basicTest()
+    @AfterMethod
+            public void tearDown()
             {
-                testHomepage.LaunchBrowser("chrome");
-                    pageA.ManageBrowserUtilities();
-                    testHomepage.NavigateToUrl("https://www.eventa.llc");
-                    testHomepage.login();
-
-                    pageActions.driver.findElement(By.xpath("//body/section[3]/div[1]/div[1]/aside[1]/div[1]/ul[1]/li[2]/a[1]")).click();
-                    String report =   pageActions.driver.findElement(By.id("organizer_profile_name")).getAttribute("value");
-                    System.out.println(report);
                 pageA.CloseBrowser();
-
-                    System.out.println("This is a demo test!!!");
-
             }
 
 
