@@ -38,7 +38,7 @@ public class AppTest
             testHomepage.NavigateToUrl("https://www.eventa.llc");
             testHomepage.login();
             testHomepage.logout();
-            Assert.assertEquals(testHomepage.validateProfileNameNotExsit("James williams"), false,
+            Assert.assertEquals(testHomepage.validateProfileNameNotExsit("James williams"), true,
                     "Failed ProfileName is not Expected at this point");
 
         }
