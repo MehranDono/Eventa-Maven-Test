@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestNGTest-f0d184b3-e3c4-41ef-8f26-20aa83af70ad"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="24.930">
+    <properties></properties>
+
+
+
+            <testcase
+                name="logoutTest"
+                time="13.091"
+                classname="com.eventa.AppTest">
+            </testcase>
+            <testcase
+                name="loginTest"
+                time="11.839"
+                classname="com.eventa.AppTest">
+            </testcase>
+</testsuite>
