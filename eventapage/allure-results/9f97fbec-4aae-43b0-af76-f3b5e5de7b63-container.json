@@ -1,1 +1,0 @@
-{"uuid":"9f97fbec-4aae-43b0-af76-f3b5e5de7b63","name":"com.eventa.AppTest.tearDown","children":["c2578737-2ea8-40f1-91a2-b5a0bc003ff3"],"description":"","befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1680135895590,"stop":1680135896287}],"start":1680135895589,"stop":1680135896287}
